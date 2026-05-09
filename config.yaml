@@ -2,6 +2,7 @@ name: "HVAC Bridge"
 version: "1.0.0"
 slug: "hvac-bridge"
 description: "RS-485 serial bridge for HAI Omnistat2 church thermostats"
+url: "https://github.com/automatetechgit/hvac-bridge-addon"
 arch:
   - amd64
   - aarch64
@@ -13,6 +14,9 @@ devices:
   - "/dev/ttyUSB1"
   - "/dev/ttyUSB2"
 apparmor: false
+build_from:
+  amd64: "ghcr.io/home-assistant/amd64-base:latest"
+  aarch64: "ghcr.io/home-assistant/aarch64-base:latest"
 options:
   mqtt_host: "192.168.30.75"
   mqtt_port: 1883
